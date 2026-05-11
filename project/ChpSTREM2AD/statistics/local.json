@@ -1,0 +1,66 @@
+﻿{
+  "language": "zh",
+  "report_titles": {
+    "zh": "sTREM2与脉络丛统计分析报告",
+    "en": "sTREM2 and Choroid Plexus Analysis Report",
+    "ja": "sTREM2と脈絡叢構造の統計解析レポート"
+  },
+  "report": {
+    "digits": 4,
+    "include_appendix": true,
+    "include_narrative": true,
+    "include_descriptive": true
+  },
+  "descriptive": {
+    "digits": 2,
+    "continuous_overall": ["S_AGE"],
+    "categorical_overall": ["S_PTGENDER_label"],
+    "continuous_by_group": ["S_AGE"],
+    "categorical_by_group": ["S_PTGENDER_label"]
+  },
+  "group_order": ["CN", "MCI", "AD"],
+  "display_labels": {
+    "variables": {
+      "S_AGE": { "zh": "年龄", "en": "Age", "ja": "年齢" },
+      "S_PTGENDER": { "zh": "性别", "en": "Sex", "ja": "性別" },
+      "S_PTGENDER_label": { "zh": "性别", "en": "Sex", "ja": "性別" },
+      "ChPICV": { "zh": "ChPICV", "en": "ChPICV", "ja": "ChPICV" },
+      "MSD_STREM2CORRECTED": { "zh": "sTREM2", "en": "sTREM2", "ja": "sTREM2" },
+      "S_ABETA": { "zh": "Aβ", "en": "Aβ", "ja": "Aβ" },
+      "PTAU": { "zh": "P-Tau", "en": "P-Tau", "ja": "P-Tau" },
+      "TAU": { "zh": "Tau", "en": "Tau", "ja": "Tau" },
+      "MMSE": { "zh": "MMSE", "en": "MMSE", "ja": "MMSE" },
+      "MOCA": { "zh": "MoCA", "en": "MoCA", "ja": "MoCA" },
+      "mPACCdigit": { "zh": "mPACCdigit", "en": "mPACCdigit", "ja": "mPACCdigit" },
+      "mPACCtrailsB": { "zh": "mPACCtrailsB", "en": "mPACCtrailsB", "ja": "mPACCtrailsB" },
+      "NegaADAS13": { "zh": "NegaADAS13", "en": "NegaADAS13", "ja": "NegaADAS13" },
+      "CDRSB": { "zh": "CDRSB", "en": "CDRSB", "ja": "CDRSB" },
+      "Cog_MMSE_MOCA": { "zh": "认知功能（MMSE + MoCA）", "en": "Cognition (MMSE + MoCA)", "ja": "認知機能（MMSE + MoCA）" },
+      "Cog_mPACC_NegaADAS13": { "zh": "认知功能（mPACC + NegaADAS13）", "en": "Cognition (mPACC + NegaADAS13)", "ja": "認知機能（mPACC + NegaADAS13）" },
+      "Cog_MMSE_MOCA_mPACC": { "zh": "认知功能（MMSE + MoCA + mPACC）", "en": "Cognition (MMSE + MoCA + mPACC)", "ja": "認知機能（MMSE + MoCA + mPACC）" },
+      "Cog_mPACC": { "zh": "认知功能（mPACC）", "en": "Cognition (mPACC)", "ja": "認知機能（mPACC）" },
+      "ChP_to_sTREM2_to_Cognition": { "zh": "ChPICV → sTREM2 → 认知功能", "en": "ChPICV → sTREM2 → cognition", "ja": "ChPICV → sTREM2 → 認知機能" },
+      "sTREM2_to_ChP_to_Cognition": { "zh": "sTREM2 → ChPICV → 认知功能", "en": "sTREM2 → ChPICV → cognition", "ja": "sTREM2 → ChPICV → 認知機能" },
+      "ChP_to_TAU_to_Cognition": { "zh": "ChPICV → Tau → 认知功能", "en": "ChPICV → Tau → cognition", "ja": "ChPICV → Tau → 認知機能" },
+      "TAU_to_ChP_to_Cognition": { "zh": "Tau → ChPICV → 认知功能", "en": "Tau → ChPICV → cognition", "ja": "Tau → ChPICV → 認知機能" },
+      "ChP_to_PTAU_to_Cognition": { "zh": "ChPICV → P-Tau → 认知功能", "en": "ChPICV → P-Tau → cognition", "ja": "ChPICV → P-Tau → 認知機能" },
+      "PTAU_to_ChP_to_Cognition": { "zh": "P-Tau → ChPICV → 认知功能", "en": "P-Tau → ChPICV → cognition", "ja": "P-Tau → ChPICV → 認知機能" },
+      "ChP_to_ABETA_to_Cognition": { "zh": "ChPICV → Aβ → 认知功能", "en": "ChPICV → Aβ → cognition", "ja": "ChPICV → Aβ → 認知機能" },
+      "ABETA_to_ChP_to_Cognition": { "zh": "Aβ → ChPICV → 认知功能", "en": "Aβ → ChPICV → cognition", "ja": "Aβ → ChPICV → 認知機能" },
+      "ChP_to_sTREM2_PTAU_ABETA_parallel": { "zh": "ChPICV → sTREM2 + P-Tau + Aβ → 认知功能", "en": "ChPICV → sTREM2 + P-Tau + Aβ → cognition", "ja": "ChPICV → sTREM2 + P-Tau + Aβ → 認知機能" },
+      "ChP_to_sTREM2_TAU_ABETA_parallel": { "zh": "ChPICV → sTREM2 + Tau + Aβ → 认知功能", "en": "ChPICV → sTREM2 + Tau + Aβ → cognition", "ja": "ChPICV → sTREM2 + Tau + Aβ → 認知機能" }
+    },
+    "levels": {
+      "S_PTGENDER_label": {
+        "Male": { "zh": "男性", "en": "Male", "ja": "男性" },
+        "Female": { "zh": "女性", "en": "Female", "ja": "女性" }
+      },
+      "S_DX_label": {
+        "CN": { "zh": "CN", "en": "CN", "ja": "CN" },
+        "MCI": { "zh": "MCI", "en": "MCI", "ja": "MCI" },
+        "AD": { "zh": "AD", "en": "AD", "ja": "AD" }
+      }
+    }
+  },
+  "project_config_override": {}
+}

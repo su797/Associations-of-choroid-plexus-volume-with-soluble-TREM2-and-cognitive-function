@@ -1,0 +1,29 @@
+{
+  "language": "zh",
+  "report": {
+    "digits": 4,
+    "include_appendix": true,
+    "include_narrative": true,
+    "include_descriptive": true,
+    "date_time_format": "%Y-%m-%d %H:%M:%S"
+  },
+  "descriptive": {
+    "digits": 2,
+    "continuous_overall": ["S_AGE"],
+    "categorical_overall": ["S_PTGENDER_label"],
+    "continuous_by_group": ["S_AGE"],
+    "categorical_by_group": ["S_PTGENDER_label"]
+  },
+  "narrative": {
+    "include_group_comparison": true,
+    "include_linear": true,
+    "include_partial": true,
+    "include_sem": true
+  },
+  "group_order": ["CN", "MCI", "AD"],
+  "display_labels": {
+    "variables": {},
+    "levels": {}
+  },
+  "project_config_override": {}
+}

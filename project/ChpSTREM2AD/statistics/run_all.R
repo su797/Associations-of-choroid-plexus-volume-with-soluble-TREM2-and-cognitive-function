@@ -1,0 +1,43 @@
+args <- commandArgs(trailingOnly = FALSE)
+file_arg <- grep("^--file=", args, value = TRUE)
+if (length(file_arg) > 0) {
+  script_dir <- dirname(normalizePath(sub("^--file=", "", file_arg[1]), winslash = "/", mustWork = TRUE))
+  setwd(script_dir)
+}
+
+Sys.unsetenv("RESEARCHR_RESULT_VERSION")
+on.exit(Sys.unsetenv("RESEARCHR_RESULT_VERSION"), add = TRUE)
+
+source(file.path(getwd(), "01_clean_project_data.R"))
+source(file.path(getwd(), "02_prepare_analysis_dataset.R"))
+source(file.path(getwd(), "02c_sample_flow_missingness_alignment.R"))
+source(file.path(getwd(), "02b_descriptive_statistics.R"))
+source(file.path(getwd(), "03_group_comparisons.R"))
+source(file.path(getwd(), "04_balance_and_matching.R"))
+source(file.path(getwd(), "05_chp_strem2_analysis.R"))
+source(file.path(getwd(), "06_tau_analysis.R"))
+source(file.path(getwd(), "06_ptau_analysis.R"))
+source(file.path(getwd(), "06b_advanced_biomarker_models.R"))
+source(file.path(getwd(), "06c_abeta_truncation_sensitivity.R"))
+source(file.path(getwd(), "06d_robustness_extensions.R"))
+source(file.path(getwd(), "06e_overlap_weighting_sensitivity.R"))
+source(file.path(getwd(), "06f_diagnosis_biologic_sensitivity.R"))
+source(file.path(getwd(), "06g_phase_site_protocol_sensitivity.R"))
+source(file.path(getwd(), "06h_timewindow_lv_sensitivity.R"))
+source(file.path(getwd(), "07_sem_mediation.R"))
+source(file.path(getwd(), "07b_serial_sem_followup.R"))
+source(file.path(getwd(), "07c_measurement_invariance.R"))
+source(file.path(getwd(), "07d_bootstrap_key_indirects.R"))
+source(file.path(getwd(), "08_generate_markdown_report_v2.R"))
+source(file.path(getwd(), "08b_generate_sem_overview.R"))
+source(file.path(getwd(), "08d_generate_parallel_sem_diagrams.R"))
+try(
+  source(file.path(getwd(), "09_generate_journal_style_report_v2.R")),
+  silent = TRUE
+)
+source(file.path(getwd(), "10_generate_high_impact_outputs.R"))
+source(file.path(getwd(), "10b_generate_serial_followup_outputs.R"))
+source(file.path(getwd(), "10c_generate_table_images.R"))
+source(file.path(getwd(), "10e_generate_stage_pairwise_supplement.R"))
+source(file.path(getwd(), "10d_generate_robustness_figures.R"))
+source(file.path(getwd(), "08c_generate_sem_difference_figures.R"))
